@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>PDF Viewer with Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="pdfController">
+    <h1>PDF Viewer with Text Search</h1>
+
+    <!-- Search Box -->
+    <div class="search-container">
+        <input type="text" ng-model="searchQuery" placeholder="Search text">
+        <button ng-click="searchText()">Search</button>
+    </div>
+
+    <!-- PDF Display Container -->
+    <div class="pdf-container" id="pdf-container"></div>
+</body>
+</html>
